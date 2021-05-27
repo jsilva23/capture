@@ -4,11 +4,11 @@ import ServicesSection from "../components/ServicesSection"
 
 const AboutUs = () => {
   return (
-    <di>
+    <div>
       <AboutSection />
       <ServicesSection />
       <FaqSection />
-    </di>
+    </div>
   );
 };
 
