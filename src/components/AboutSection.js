@@ -1,5 +1,4 @@
 import home1 from "../img/home1.png";
-import Styled from "styled-components";
 
 import { About, Description, Hide, Image } from "../styles";
 
