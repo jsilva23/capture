@@ -1,6 +1,5 @@
 import Styled from "styled-components";
 
-
 export const About = Styled.div`
   min-height: 90vh;
   display: flex;
@@ -13,6 +12,7 @@ export const About = Styled.div`
 export const Description = Styled.div`
   flex: 1;
   padding-right: 5rem;
+  z-index: 2;
   
   h2 {
     font-weight: lighter;
@@ -22,6 +22,7 @@ export const Description = Styled.div`
 export const Image = Styled.div`
   flex: 1;
   overflow: hidden;
+  z-index: 2;
 
   img {
     width: 100%;
