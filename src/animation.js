@@ -101,6 +101,21 @@ export const sliderContainer = {
   },
 };
 
+export const movieContainer = {
+  hidden: {
+    opacity: 0,
+  },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.15,
+      ease: 'easeOut',
+      duration: 1,
+      when: 'beforeChildren',
+    },
+  },
+};
+
 export const scrollReveal = {
   hidden: {
     opacity: 0,
