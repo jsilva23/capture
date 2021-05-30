@@ -16,6 +16,8 @@ import {
   lineAnim,
 } from "../animation";
 
+import ScrollTop from "../components/ScrollTop";
+
 const OurWork = () => {
   const [element, controls] = useScroll();
   const [element2, controls2] = useScroll();
@@ -62,6 +64,7 @@ const OurWork = () => {
           <motion.img src={goodtimes} alt="Good times" />
         </Link>
       </Movie>
+      <ScrollTop />
     </Work>
   );
 };
@@ -73,6 +76,10 @@ const Work = Styled(motion.div)`
     
     h2 {
         padding: 1rem 0rem;
+    }
+
+    @media (max-width: 1500px) {
+    padding: 2rem 2rem;
     }
 `;
 

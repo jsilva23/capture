@@ -6,7 +6,6 @@ import { MovieState } from "../movieState";
 import { motion } from "framer-motion";
 import { pageAnimation } from "../animation";
 
-
 const MovieDetail = () => {
   const history = useHistory();
   const url = history.location.pathname;
@@ -22,7 +21,12 @@ const MovieDetail = () => {
   return (
     <>
       {movie && (
-        <Details variants={pageAnimation} exit="exit" initial="hidden" animate="show">
+        <Details
+          variants={pageAnimation}
+          exit="exit"
+          initial="hidden"
+          animate="show"
+        >
           <HeadLine>
             <h2>{movie.title}</h2>
             <img src={movie.mainImg} alt={movie.title} />
@@ -30,12 +34,16 @@ const MovieDetail = () => {
 
           <Awards>
             {movie.awards.map((award) => (
-              <Award title={award.title} description={award.description} key={award.title} />
+              <Award
+                title={award.title}
+                description={award.description}
+                key={award.title}
+              />
             ))}
           </Awards>
 
           <ImageDisplay>
-              <img src={movie.secondaryImg} alt="" />
+            <img src={movie.secondaryImg} alt="" />
           </ImageDisplay>
         </Details>
       )}
@@ -73,6 +81,11 @@ const Awards = Styled.div`
     display: flex;
     align-items: center;
     justify-content: space-around;
+
+    @media (max-width: 1500px) {
+    display: block;
+    margin: 2rem 2rem;
+  }
 `;
 
 const AwardStyle = Styled.div`
@@ -102,10 +115,10 @@ const ImageDisplay = Styled.div`
         height: 100vh;
         object-fit: cover;
     }
-`
+`;
 
 //Award component
-const Award = ({title, description}) => {
+const Award = ({ title, description }) => {
   return (
     <AwardStyle>
       <h3>{title}</h3>
